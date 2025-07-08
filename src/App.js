@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom'; // No need for Link here anymore, it's in NavBar
+import HomePage from './HomePage/HomePage';// import About from './components/About';
+// import Contact from './components/Contact';
+import NavBar from './NavBar/NavBar'; // Import the new NavBar component
 import './App.css';
-
+import About from './About/About';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar /> {/* Render the NavBar component here */}
+
+      <div className="page-content" style={{ padding: '20px', textAlign: 'center' }}>
+        <Routes>
+          <Route path="/" element={<HomePage />} /> {/* Use HomePage for the root path */}
+          <Route path="/about" element={<About />} />
+          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="*" element={<h2>404 Not Found</h2>} />
+        </Routes>
+      </div>
     </div>
   );
 }
