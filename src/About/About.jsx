@@ -3,8 +3,8 @@ import React from 'react';
 function About() {
         return (
                 <div>
-                        <h1>Welcome to My ABOUTABOUT!</h1>
-                        <p>This is the home page. Explore the navigation above to learn more.</p>
+                        <h1>About!</h1>
+                        <p>This is the About Page. This website is a colab between Riley and Sam. we are in love and stuff xoxo Gosip Girl.</p>
                         <img
                                 src="https://via.placeholder.com/600x200?text=Placeholder+Image"
                                 alt="Placeholder"
